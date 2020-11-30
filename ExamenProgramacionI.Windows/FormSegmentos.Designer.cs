@@ -30,11 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormSegmentos));
             this.dataGridView = new System.Windows.Forms.DataGridView();
-            this.AX = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.AY = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.BX = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.BY = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Longitud = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.toolStrip = new System.Windows.Forms.ToolStrip();
             this.btnAgregar = new System.Windows.Forms.ToolStripButton();
             this.btnEditar = new System.Windows.Forms.ToolStripButton();
@@ -48,6 +43,12 @@
             this.ascendenteToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.descendenteToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.restaurarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.AX = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.AY = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.BX = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.BY = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Longitud = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.EsOblicuo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             this.toolStrip.SuspendLayout();
             this.SuspendLayout();
@@ -66,49 +67,15 @@
             this.AY,
             this.BX,
             this.BY,
-            this.Longitud});
+            this.Longitud,
+            this.EsOblicuo});
             this.dataGridView.Location = new System.Drawing.Point(0, 28);
             this.dataGridView.MultiSelect = false;
             this.dataGridView.Name = "dataGridView";
             this.dataGridView.ReadOnly = true;
             this.dataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView.Size = new System.Drawing.Size(544, 410);
+            this.dataGridView.Size = new System.Drawing.Size(632, 410);
             this.dataGridView.TabIndex = 0;
-            // 
-            // AX
-            // 
-            this.AX.Frozen = true;
-            this.AX.HeaderText = "X1";
-            this.AX.Name = "AX";
-            this.AX.ReadOnly = true;
-            // 
-            // AY
-            // 
-            this.AY.Frozen = true;
-            this.AY.HeaderText = "Y1";
-            this.AY.Name = "AY";
-            this.AY.ReadOnly = true;
-            // 
-            // BX
-            // 
-            this.BX.Frozen = true;
-            this.BX.HeaderText = "X2";
-            this.BX.Name = "BX";
-            this.BX.ReadOnly = true;
-            // 
-            // BY
-            // 
-            this.BY.Frozen = true;
-            this.BY.HeaderText = "Y2";
-            this.BY.Name = "BY";
-            this.BY.ReadOnly = true;
-            // 
-            // Longitud
-            // 
-            this.Longitud.Frozen = true;
-            this.Longitud.HeaderText = "Longitud";
-            this.Longitud.Name = "Longitud";
-            this.Longitud.ReadOnly = true;
             // 
             // toolStrip
             // 
@@ -121,7 +88,7 @@
             this.toolStripDropDownButton1});
             this.toolStrip.Location = new System.Drawing.Point(0, 0);
             this.toolStrip.Name = "toolStrip";
-            this.toolStrip.Size = new System.Drawing.Size(544, 25);
+            this.toolStrip.Size = new System.Drawing.Size(632, 25);
             this.toolStrip.TabIndex = 1;
             this.toolStrip.Text = "toolStrip1";
             // 
@@ -179,20 +146,20 @@
             this.ascendenteToolStripMenuItem,
             this.descendenteToolStripMenuItem});
             this.longitudToolStripMenuItem.Name = "longitudToolStripMenuItem";
-            this.longitudToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.longitudToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
             this.longitudToolStripMenuItem.Text = "Longitud";
             // 
             // ascendenteToolStripMenuItem
             // 
             this.ascendenteToolStripMenuItem.Name = "ascendenteToolStripMenuItem";
-            this.ascendenteToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.ascendenteToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
             this.ascendenteToolStripMenuItem.Text = "Ascendente";
             this.ascendenteToolStripMenuItem.Click += new System.EventHandler(this.ascendenteToolStripMenuItem_Click);
             // 
             // descendenteToolStripMenuItem
             // 
             this.descendenteToolStripMenuItem.Name = "descendenteToolStripMenuItem";
-            this.descendenteToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.descendenteToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
             this.descendenteToolStripMenuItem.Text = "Descendente";
             this.descendenteToolStripMenuItem.Click += new System.EventHandler(this.descendenteToolStripMenuItem_Click);
             // 
@@ -202,20 +169,20 @@
             this.ascendenteToolStripMenuItem1,
             this.descendenteToolStripMenuItem1});
             this.coordenadaX1ToolStripMenuItem.Name = "coordenadaX1ToolStripMenuItem";
-            this.coordenadaX1ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.coordenadaX1ToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
             this.coordenadaX1ToolStripMenuItem.Text = "Coordenada X1";
             // 
             // ascendenteToolStripMenuItem1
             // 
             this.ascendenteToolStripMenuItem1.Name = "ascendenteToolStripMenuItem1";
-            this.ascendenteToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.ascendenteToolStripMenuItem1.Size = new System.Drawing.Size(142, 22);
             this.ascendenteToolStripMenuItem1.Text = "Ascendente";
             this.ascendenteToolStripMenuItem1.Click += new System.EventHandler(this.ascendenteToolStripMenuItem1_Click);
             // 
             // descendenteToolStripMenuItem1
             // 
             this.descendenteToolStripMenuItem1.Name = "descendenteToolStripMenuItem1";
-            this.descendenteToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.descendenteToolStripMenuItem1.Size = new System.Drawing.Size(142, 22);
             this.descendenteToolStripMenuItem1.Text = "Descendente";
             this.descendenteToolStripMenuItem1.Click += new System.EventHandler(this.descendenteToolStripMenuItem1_Click);
             // 
@@ -223,18 +190,66 @@
             // 
             this.restaurarToolStripMenuItem.Enabled = false;
             this.restaurarToolStripMenuItem.Name = "restaurarToolStripMenuItem";
-            this.restaurarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.restaurarToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
             this.restaurarToolStripMenuItem.Text = "Restaurar";
             this.restaurarToolStripMenuItem.Click += new System.EventHandler(this.restaurarToolStripMenuItem_Click);
+            // 
+            // AX
+            // 
+            this.AX.Frozen = true;
+            this.AX.HeaderText = "X1";
+            this.AX.Name = "AX";
+            this.AX.ReadOnly = true;
+            this.AX.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // AY
+            // 
+            this.AY.Frozen = true;
+            this.AY.HeaderText = "Y1";
+            this.AY.Name = "AY";
+            this.AY.ReadOnly = true;
+            this.AY.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // BX
+            // 
+            this.BX.Frozen = true;
+            this.BX.HeaderText = "X2";
+            this.BX.Name = "BX";
+            this.BX.ReadOnly = true;
+            this.BX.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // BY
+            // 
+            this.BY.Frozen = true;
+            this.BY.HeaderText = "Y2";
+            this.BY.Name = "BY";
+            this.BY.ReadOnly = true;
+            this.BY.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // Longitud
+            // 
+            this.Longitud.Frozen = true;
+            this.Longitud.HeaderText = "Longitud";
+            this.Longitud.Name = "Longitud";
+            this.Longitud.ReadOnly = true;
+            this.Longitud.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // EsOblicuo
+            // 
+            this.EsOblicuo.Frozen = true;
+            this.EsOblicuo.HeaderText = "Es oblicuo";
+            this.EsOblicuo.Name = "EsOblicuo";
+            this.EsOblicuo.ReadOnly = true;
+            this.EsOblicuo.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // FormSegmentos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(544, 450);
+            this.ClientSize = new System.Drawing.Size(632, 450);
             this.Controls.Add(this.toolStrip);
             this.Controls.Add(this.dataGridView);
-            this.MinimumSize = new System.Drawing.Size(560, 489);
+            this.MinimumSize = new System.Drawing.Size(648, 489);
             this.Name = "FormSegmentos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Lista de Segmentos Rectilíneos";
@@ -250,11 +265,6 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dataGridView;
-        private System.Windows.Forms.DataGridViewTextBoxColumn AX;
-        private System.Windows.Forms.DataGridViewTextBoxColumn AY;
-        private System.Windows.Forms.DataGridViewTextBoxColumn BX;
-        private System.Windows.Forms.DataGridViewTextBoxColumn BY;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Longitud;
         private System.Windows.Forms.ToolStrip toolStrip;
         private System.Windows.Forms.ToolStripButton btnAgregar;
         private System.Windows.Forms.ToolStripButton btnEditar;
@@ -268,5 +278,11 @@
         private System.Windows.Forms.ToolStripMenuItem ascendenteToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem descendenteToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem restaurarToolStripMenuItem;
+        private System.Windows.Forms.DataGridViewTextBoxColumn AX;
+        private System.Windows.Forms.DataGridViewTextBoxColumn AY;
+        private System.Windows.Forms.DataGridViewTextBoxColumn BX;
+        private System.Windows.Forms.DataGridViewTextBoxColumn BY;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Longitud;
+        private System.Windows.Forms.DataGridViewTextBoxColumn EsOblicuo;
     }
 }

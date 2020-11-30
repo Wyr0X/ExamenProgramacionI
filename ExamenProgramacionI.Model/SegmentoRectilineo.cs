@@ -54,5 +54,12 @@ namespace ExamenProgramacionI.Model
         {
             return ToString().GetHashCode();
         }
+
+        public bool EsOblicuo()
+        {
+            if (A.X == B.X) return false;
+            if (A.Y == B.Y) return false;
+            return true;
+        }
     }
 }

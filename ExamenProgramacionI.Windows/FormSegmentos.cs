@@ -45,6 +45,7 @@ namespace ExamenProgramacionI.Windows
             row.Cells[2].Value = segmento.B.X;
             row.Cells[3].Value = segmento.B.Y;
             row.Cells[4].Value = segmento.Longitud();
+            row.Cells[5].Value = segmento.EsOblicuo() ? "Sí" : "No";
             row.Tag = segmento;
 
             return row;
